@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daebak - Free Cloud Hosting Platform</title>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name = "author" content = "Sourya Mishra"/>
+    <link rel = "stylesheet" href = "../css/common.css"/>
+    <link rel = "stylesheet" href = "../css/docs.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous">
+</head>
+<body class = "bg-theme">
+    <header>
+        <div class="navbar-wrapper">
+            <div class="navbar flex justify-between">
+                <h1 class = "brand fw-600"><a href = "index.html">Daebak</a></h1>
+                <nav class = "navigation">
+                    <label tabindex = "0" for = "toggle" class = "hamburger"><i class="fas fa-bars"></i></label>
+                    <input id = "toggle" type = "checkbox" class = "checkbox"/>
+                    <ul class = "links">
+                        <li><a href="index.html" style = "--delay:0.2s;">Home</a></li>
+                        <li><a href="features.html" style = "--delay:0.3s;">Features</a></li>
+                        <li><a class = "active" href="docs.html" style = "--delay:0.4s;">Docs</a></li>
+                        <li>
+                            <span><i class="fas fa-adjust"></i></span>
+                            <input id = "toggle-theme" class = "toggle-theme" type = "checkbox"/>
+                            <label tabindex = "0" title = "Toggle dark mode" class = "toggle-pill" for = "toggle-theme">
+                                <div class = "toggle-pill-bg"></div>
+                            </label>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class = "documentation">
+        <section class = "showcase bg-highlight no-after">
+            <div class = "container flex justify-between">
+                <div class = "content slide-right">
+                   <h1>Docs</h1>
+                   <p>Learn how to work with the Daebak platform</p>
+               </div>
+               <img class = "slide-left" src="../../images/docs.png" alt="server">
+           </div>
+        </section>
+
+        <section class="container flex justify-between">
+            <aside class = "side-nav card">
+                <h4 class = "title">Essentials</h4>
+                <ul class="side-nav-links list-style-none">
+                    <li class = "side-nav-link-item"><a class = "nav-link active" href="#!">Introduction</a></li>
+                    <li class = "side-nav-link-item"><a class = "nav-link" href="#!">About Daebak</a></li>
+                    <li class = "side-nav-link-item"><a class = "nav-link" href="#!">Installation</a></li>
+                </ul>
+
+                <h4 class = "title">Deployment</h4>
+                <ul class="side-nav-links list-style-none">
+                    <li class = "side-nav-link-item"><a class = "nav-link" href="#!">Setting up a container</a></li>
+                    <li class = "side-nav-link-item"><a class = "nav-link" href="#!">Using the CLI</a></li>
+                    <li class = "side-nav-link-item"><a class = "nav-link" href="#!">Managing resources</a></li>
+                    <li class = "side-nav-link-item"><a class = "nav-link" href="#!">Upgrade &amp; downgrade</a></li>
+                </ul>
+            </aside>
+
+            <article class = "article card">
+                <h4 class = "title">Introduction</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio illo facere perferendis laborum? Similique recusandae 
+                    incidunt eos dolorum aliquam ipsam unde perspiciatis laudantium totam quam laborum velit, at maxime minus?</p>
+                <p class = "alert-success fw-600">
+                    <i class="fas fa-info"></i>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, animi?
+                </p>
+                <h4 class = "title">Lorem, ipsium dolor</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima totam magni eius vitae velit id, atque veritatis! At, vero porro.</p>
+                <a class = "btn" href = "#!">Install CLI</a>
+                <h4 class="title">Requirements</h4>
+                <p>Windows 10, Mac OSX, Linux
+                    <br/>
+                    Node.js v12 or higher</p>
+                <h4 class="title">Install</h4>
+                <p>Mac (Homebrew)</p>
+                <div class="command">
+                    <code>brew install daebak-cli</code>
+                    <a title = "Copy to clipboard" tabindex = "-1" class="copy-icon" href = "#!">
+                        <i class="far fa-clipboard"></i>
+                    </a>
+                </div>
+                <p>NPM</p>
+                <div class="command">
+                    <code>npm install daebak-cli</code>
+                    <a title = "Copy to clipboard" tabindex = "-1" class="copy-icon" href = "#!">
+                        <i class="far fa-clipboard"></i>
+                    </a>
+                </div>
+                <p>Yarn</p>
+                <div class="command">
+                    <code>yarn add daebak-cli</code>
+                    <a title = "Copy to clipboard" tabindex = "-1" class="copy-icon" href = "#!">
+                        <i class="far fa-clipboard"></i>
+                    </a>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="brand">
+                <h1>Daebak</h1>
+                <p>Copyright &copy; 2021</p>
+            </div>
+            <ul class="sitemap">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="docs.html">Docs</a></li>
+            </ul>
+            <div class="social">
+                <a href="#!"><i class="fab fa-github fa-2x"></i></a>
+                <a href="#!"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#!"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#!"><i class="fab fa-twitter fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src = "../js/common.js" defer></script>
+    
+</body>
+</html>

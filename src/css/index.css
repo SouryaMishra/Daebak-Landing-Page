@@ -1,0 +1,340 @@
+.showcase{
+    padding-top: 140px;
+    position: relative;
+}
+
+.showcase::after{
+    content: "";
+    position: absolute;
+    left:0;
+    bottom:-90px;
+    height:90px;
+    width:100%;
+    background-color: var(--theme-bg-color);
+    transform: skewY(-4deg);
+    transform-origin: 20% center;
+}
+
+.showcase .content :is(h1,p,a){
+    color: #fff;
+}
+
+.showcase .card{
+    width: 35%;
+    min-width: 350px;
+    margin-left: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.card h1{
+    font-weight: normal;
+    margin: 1rem 0;
+    color: var(--text-color);
+}
+
+.block{
+    display: block;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+input{
+    border: none;
+    outline: none;
+    padding: 0.2rem;
+    font-size:16px;
+    border-bottom: 1px solid #b4becb;
+    background: transparent;
+    caret-color: var(--text-color);
+    color: var(--text-color);
+}
+
+.btn{
+    --btn-bg-color: var(--secondary-clr);
+    display: inline-block;
+    border-radius: 30px;
+    padding: 0.6rem 2rem;
+    margin-top: 1rem;
+    color: #fff;
+    background-color: var(--btn-bg-color);
+    border: 1px solid var(--btn-bg-color);
+    cursor: pointer;
+}
+
+.btn-submit{
+    --btn-bg-color: var(--primary-clr);
+    background-color: var(--btn-bg-color);
+    border: 1px solid var(--btn-bg-color);
+}
+
+.content h1{
+    font-size: 40px;
+    margin-bottom: 1rem;
+}
+
+.overview{
+    margin-top: 6rem;
+}
+
+@keyframes slide-down{
+    from {
+        opacity:0;
+        transform: translateY(-100px)
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+.overview .statistics{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    animation: slide-down 1s ease 0.5s;
+    animation-fill-mode: backwards;
+}
+
+.overview .welcome{
+    margin-bottom: 2rem;
+    animation: slide-down 1s ease 0.5s;
+    animation-fill-mode: backwards;
+}
+
+.statistics-item > h1{
+    margin: 0.5rem 0;
+    font-size:32px;
+}
+
+.command-line{
+    margin-top: 2rem;
+    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, minmax(20px, auto));
+    justify-items: stretch;
+    gap: 2rem 6rem;
+    grid-template-areas: "command ."
+                         "command ."
+}
+
+.command-line .card{
+    padding: 1.5rem 0.5rem;
+}
+
+.info .content{
+    margin-bottom: 2rem;
+    align-self: center;
+}
+
+.info a{
+    background-color: var(--secondary-clr);
+    border: none;
+}
+.info img{
+    width: 500px;
+}
+
+.info :is(.content, img){
+    opacity:0;
+    animation-fill-mode: forwards;
+}
+
+.testimonials{
+    position: relative;
+}
+
+.testimonials::before, .testimonials::after{
+    position: absolute;
+    content: "";
+    background: var(--theme-bg-color);
+    opacity:0.8;
+    z-index:1;
+    top:0;
+    height: 100%;
+    width: 5%;
+}
+
+.testimonials::before{
+    left:0;
+}
+
+.testimonials::after{
+    right:0; 
+}
+
+.testimonials .carousel{
+    width: 95%;
+    margin: 0 auto;
+    gap:32px;
+    transition: transform 0.5s ease;
+}
+
+.testimonials .btn-slider{
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    color: var(--secondary-clr);
+    font-size: 28px;
+    background: transparent;
+    border:none;
+    z-index:1;
+}
+
+.left{
+    left: 15%;
+}
+
+.right{
+    right: 15%;
+}
+
+.carousel .card{
+    flex: 1 0 100%;
+    padding: 2rem 20%;
+    display: flex;
+    align-items: center;
+}
+
+blockquote::before{
+    content: open-quote;
+}
+
+blockquote::after{
+    content: close-quote;
+}
+
+cite{
+    display: block;
+    text-align: right;
+    margin-top: 1rem;
+}
+
+.pagination{
+    gap:0.5rem;
+    margin-top: 2rem;
+}
+
+.pagination .circle{
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    border: 1px solid var(--primary-clr);
+    background: #fff;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.circle.active{
+    background: var(--primary-clr);
+    transform: scale(1.2);
+}
+
+.languages .card{
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.languages .card.animate{
+    animation: rotate-card 0.8s ease var(--delay);
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes rotate-card{
+    from{
+        transform: perspective(1000px) rotateY(180deg);
+    }
+
+    to{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+.languages .card p{
+    margin-bottom: 1rem;
+    font-size: 18px;
+}
+
+.languages .card img{
+    width: 82px;
+}
+
+@media screen and (max-width: 960px){
+    .content + .card{
+        margin-top:2rem;
+        margin-left:0;
+        width:60%;
+    }
+
+    .info .container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .command-line{
+        gap: 2rem 2rem;
+        grid-template-columns: 1fr;
+        grid-template-areas: "command";
+    }
+
+}
+
+@media screen and (max-width: 840px){
+    .navigation{
+        position: relative;
+    }
+    .navigation .links{
+        position: fixed;
+        top:61px;
+        right:0;
+        width: 100%; /*viewport acts as parent for fixed position elements*/
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 5%;
+        background: var(--card-bg-color);
+        border-radius: 0 0 4px 4px;
+        transform: translateY(-400px);
+        opacity: 0;
+        transform-origin: top;  
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .navigation .hamburger{
+        display: block;
+    }
+
+    .navigation .checkbox:checked + .links{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .links li{
+        text-align: left;
+    }
+
+    .links a{
+        margin-left:0;
+        transform: translateX(-150px);
+        opacity: 0;
+        transition: transform 0.3s ease var(--delay), opacity 0.3s ease var(--delay);
+    }
+
+    .links span{
+        margin-left:0;
+    }
+
+    .links :is(a, span, i){
+        color: var(--text-color);
+    }
+
+    .links a.slide-from-left{
+        opacity:1;
+        transform: translateX(0);
+    }
+
+    .overview .statistics {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+}
+

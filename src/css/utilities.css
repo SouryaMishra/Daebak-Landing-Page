@@ -1,0 +1,91 @@
+.flex{
+    display: flex;
+    gap: 1rem;
+}
+
+.bg-highlight{
+    background: var(--primary-clr);
+    background:linear-gradient(to right, #1c73ca, #2e790b) ;
+}
+
+.bg-highlight .content > :is(h1, p){
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.fw-600{
+    font-weight: 600;
+}
+
+.bg-theme{
+    background-color: var(--theme-bg-color);
+}
+
+p, i, h1, h2, h3, h4, h5, h6, span, blockquote, cite{
+    color: var(--text-color);
+}
+
+.card{
+    background:var(--card-bg-color);
+    box-shadow: var(--card-shadow);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.no-after::after{
+    display:none !important;
+}
+
+.list-style-none{
+    list-style: none;
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+.tl-left{
+    text-align: left;
+}
+
+.tl-center{
+    text-align: center;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.slide-right{
+    animation: slide-right 1s ease;
+}
+
+.slide-left{
+    animation: slide-left 1s ease;
+}
+
+@keyframes slide-right{
+    from{
+        opacity:0;
+        transform: translateX(-100px)
+    }
+    to{
+        opacity:1;
+        transform: translateX(0)
+    }
+}
+
+@keyframes slide-left{
+    from{
+        opacity:0;
+        transform: translateX(100px)
+    }
+    to{
+        opacity:1;
+        transform: translateX(0)
+    }
+}

@@ -1,0 +1,309 @@
+@import url("./utilities.css");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+*,*::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-clr: #047aed;
+    --header-clr: #5badfd;
+    --secondary-clr:  #002240;
+    --card-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    --theme-bg-color: #efefef;
+    --text-color: #000;
+    --card-bg-color: #fff;
+    --side-nav-bg-color: #e8e8e8;
+    --success-clr: #5cb85c;
+    --copied-success-clr: lightseagreen;
+
+    --theme-bg-color-dark: #1e1e1e;
+    --text-color-dark: #fff;
+    --card-bg-color-dark: #2e2e2e;
+    --side-nav-bg-color-dark: #121212;
+}
+
+:root.dark{
+    --theme-bg-color: var(--theme-bg-color-dark);
+    --text-color: var(--text-color-dark);
+    --card-bg-color: var(--card-bg-color-dark);
+    --side-nav-bg-color: var(--side-nav-bg-color-dark);
+}
+
+@media (prefers-color-scheme: dark){
+    :root{
+        --theme-bg-color: var(--theme-bg-color-dark);
+        --text-color: var(--text-color-dark);
+        --card-bg-color: var(--card-bg-color-dark);
+        --side-nav-bg-color: var(--side-nav-bg-color-dark);
+    }
+}
+body{
+    font-family: "Lato",Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body.nav-open{
+    overflow-y: hidden;
+}
+body.nav-open::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 2;
+}
+
+a, a:hover, a:visited{
+    text-decoration: none;
+    display:inline-block;
+}
+
+img{
+    max-width: 100%;
+    object-fit: contain;
+}
+header{   
+    background: linear-gradient(to bottom, rgb(0, 0, 0), #2583e79a), url("../../images/mining.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar-wrapper{
+    z-index: 10;
+    position: fixed;
+    top:0;
+    background: var(--theme-bg-color-dark);
+    width: 100%;
+    padding: 0.5rem 0;
+
+}
+.navbar{
+    user-select: none;
+    align-items: center;
+}
+
+.navbar :is(a, span, i){
+    color: #fff;
+}
+
+.navbar a:is(:hover,.active){
+    color: var(--header-clr);
+    font-weight: 600;
+}
+
+.container, .navbar{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar .brand{
+    font-size: 30px;
+}
+
+.navigation .links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.navigation .checkbox, .navigation .hamburger{
+    display: none;
+}
+
+.navigation .hamburger{
+    border: 1px solid var(--header-clr);
+    padding: 4px 8px;
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.hamburger i{
+    color: var(--header-clr);
+}
+
+.links a, span{
+    margin-left:1rem;
+}
+
+.links a{
+    position: relative;
+    padding: 0.3rem 0.5rem; 
+}
+
+.links li a.active::after, .links a:hover::after{
+    width: 100%;
+}
+
+.links a::after{
+    content: "";
+    position: absolute;
+    left:0;
+    bottom:0;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 0.2s ease;
+}
+
+.links li:last-child{
+    display: flex;
+    padding:0.5rem 0;
+}
+
+li .toggle-pill{
+    display: flex;
+    align-items: center;
+}
+
+.links span{
+    font-size: 24px;
+}
+
+.toggle-pill .toggle-pill-bg{
+    width:45px;
+    height: 20px;
+    border-radius: 10px;
+    background: #555;
+    position: relative;
+    display: inline-block;
+    border: 1px solid var(--primary-clr);
+    margin-left: 1rem;
+    color: #fff;
+    font-size:12px;
+    line-height:12px;
+    cursor: pointer;
+}
+
+.toggle-pill .toggle-pill-bg::before{
+    content: "";
+    position: absolute;
+    top:-1px;
+    left:-2px;
+    width: 20px;
+    height: calc(100% + 2px);
+    border-radius: 50%;
+    border: 1px solid #a0a0a0;
+    background: linear-gradient(to bottom left, #a0a0a0, #fff, #a0a0a0);
+    z-index: 1;
+    transition: transform 0.1s ease;
+}
+
+.toggle-theme{
+    display: none;
+}
+
+.toggle-theme:checked + label .toggle-pill-bg{
+    background-color: var(--primary-clr);
+    color: var(--primary-clr);
+}
+
+.toggle-theme:checked + label .toggle-pill-bg::before{
+    transform: translateX(27px);
+}
+
+.features .container img, .documentation .container img{
+    height: 200px;
+    width: 200px;
+}
+
+.features .showcase, .documentation .showcase{
+    padding-top: 108px;
+}
+
+.container{
+    padding: 2rem 0;
+}
+
+h2.content-title{
+    margin-bottom: 2rem;
+}
+
+.command{
+    padding: 2rem;
+    background : #212020;
+    border-radius: 8px;
+    grid-area: command;
+    align-self: center;   
+    border: 1px solid #fff;
+    position: relative;
+}
+
+.command code{
+    color: #fff;
+    font-size: 18px;
+}
+
+.command .copy-icon{
+    position: absolute;
+    top:5px;
+    right:10px;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.copy-icon:hover{
+    background-color: #545d67
+}
+.copy-icon i{
+    color: #fff;
+}
+
+.copied{
+    pointer-events: none;
+    cursor: not-allowed;
+    background-color: var(--copied-success-clr);
+    
+}
+.copied i, .copied span{
+    color: #fff;
+}
+
+footer{
+    margin-top: 2rem;
+    padding: 2rem 0;
+    background: var(--secondary-clr);
+}
+footer .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+footer :is(h1,p,a,i){
+    color: #fff;
+}
+
+footer ul{
+    list-style: none;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 960px){
+    .container{
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer .container{
+        grid-template-columns: 1fr;
+        gap:1rem;
+        text-align: left;
+    }
+
+}
