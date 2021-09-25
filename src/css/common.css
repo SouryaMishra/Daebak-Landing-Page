@@ -69,7 +69,7 @@ img{
     object-fit: contain;
 }
 header{   
-    background: linear-gradient(to bottom, rgb(0, 0, 0), #2583e79a), url("../../images/mining.jpg");
+    background: linear-gradient(to bottom, rgb(0, 0, 0), #2583e79a), url("../images/mining.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }

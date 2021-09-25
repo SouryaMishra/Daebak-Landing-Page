@@ -85,14 +85,10 @@ input{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    /* animation: slide-down 1s ease 0.5s;
-    animation-fill-mode: backwards; */
 }
 
 .overview .welcome{
     margin-bottom: 2rem;
-    /* animation: slide-down 1s ease 0.5s;
-    animation-fill-mode: backwards; */
 }
 
 .statistics-item > h1{
