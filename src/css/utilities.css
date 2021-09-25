@@ -68,6 +68,10 @@ p, i, h1, h2, h3, h4, h5, h6, span, blockquote, cite{
     animation: slide-left 1s ease;
 }
 
+.slide-down{
+    animation: slide-down 1s ease 0.5s;
+}
+
 @keyframes slide-right{
     from{
         opacity:0;
@@ -87,5 +91,16 @@ p, i, h1, h2, h3, h4, h5, h6, span, blockquote, cite{
     to{
         opacity:1;
         transform: translateX(0)
+    }
+}
+
+@keyframes slide-down{
+    from {
+        opacity:0;
+        transform: translateY(-100px)
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0)
     }
 }

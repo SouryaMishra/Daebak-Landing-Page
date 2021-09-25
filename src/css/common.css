@@ -305,5 +305,58 @@ footer ul{
         gap:1rem;
         text-align: left;
     }
+}
 
+@media screen and (max-width: 840px){
+    .navigation{
+        position: relative;
+    }
+    .navigation .links{
+        position: fixed;
+        top:61px;
+        right:0;
+        width: 100%; /*viewport acts as parent for fixed position elements*/
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 5%;
+        background: var(--card-bg-color);
+        border-radius: 0 0 4px 4px;
+        transform: translateY(-400px);
+        opacity: 0;
+        transform-origin: top;  
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .navigation .hamburger{
+        display: block;
+    }
+
+    .navigation .checkbox:checked + .links{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .links li{
+        text-align: left;
+    }
+
+    .links a{
+        margin-left:0;
+        transform: translateX(-150px);
+        opacity: 0;
+        transition: transform 0.3s ease var(--delay), opacity 0.3s ease var(--delay);
+    }
+
+    .links span{
+        margin-left:0;
+    }
+
+    .links :is(a, span, i){
+        color: var(--text-color);
+    }
+
+    .links a.slide-from-left{
+        opacity:1;
+        transform: translateX(0);
+    }
 }
