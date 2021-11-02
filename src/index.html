@@ -1,249 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Daebak - Free Cloud Hosting Platform</title>
-    <meta name="description" content="Free Cloud Hosting Platform"/>
-    <meta name="keywords" content="free, cloud, hosting"/>
-    <meta name = "author" content = "Sourya Mishra"/>
-    <link rel = "preload" as = "image" href = "./images/mining.jpg"/>
-    <link rel = "stylesheet" href = "./css/common.css"/>
-    <link rel = "stylesheet" href = "./css/index.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
-    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous">
-</head>
-<body class = "bg-theme">
+    <meta name="description" content="Free Cloud Hosting Platform" />
+    <meta name="keywords" content="free, cloud, hosting" />
+    <meta name="author" content="Sourya Mishra" />
+    <link rel="preload" as="image" href="./images/mining.jpg" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-theme">
     <header>
-        <div class="navbar-wrapper">
-            <div class="navbar flex justify-between">
-                <h1 class = "brand fw-600"><a href = "index.html">Daebak</a></h1>
-                <nav class = "navigation">
-                    <label tabindex = "0" for = "toggle" class = "hamburger"><i class="fas fa-bars"></i></label>
-                    <input id = "toggle" type = "checkbox" class = "checkbox"/>
-                    <ul class = "links">
-                        <li><a class = "active" href="index.html" style = "--delay:0.2s;">Home</a></li>
-                        <li><a href="features.html" style = "--delay:0.3s;">Features</a></li>
-                        <li><a href="docs.html" style = "--delay:0.4s;">Docs</a></li>
-                        <li>
-                            <span><i class="fas fa-adjust"></i></span>
-                            <input id = "toggle-theme" class = "toggle-theme" type = "checkbox"/>
-                            <label tabindex = "0" title = "Toggle dark mode" class = "toggle-pill" for = "toggle-theme">
-                                <div class = "toggle-pill-bg"></div>
-                            </label>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+      <div class="navbar-wrapper">
+        <div class="navbar flex justify-between">
+          <h1 class="brand fw-600"><a href="index.html">Daebak</a></h1>
+          <nav class="navigation">
+            <label tabindex="0" for="toggle" class="hamburger"
+              ><i class="fas fa-bars"></i
+            ></label>
+            <input id="toggle" type="checkbox" class="checkbox" />
+            <ul class="links">
+              <li>
+                <a class="active" href="index.html" style="--delay: 0.2s"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="features.html" style="--delay: 0.3s">Features</a>
+              </li>
+              <li><a href="docs.html" style="--delay: 0.4s">Docs</a></li>
+              <li>
+                <span><i class="fas fa-adjust"></i></span>
+                <input id="toggle-theme" class="toggle-theme" type="checkbox" />
+                <label
+                  tabindex="0"
+                  title="Toggle dark mode"
+                  class="toggle-pill"
+                  for="toggle-theme"
+                >
+                  <div class="toggle-pill-bg"></div>
+                </label>
+              </li>
+            </ul>
+          </nav>
         </div>
+      </div>
 
-        <section class = "showcase">
-            <div class = "container flex justify-between">
-                <div class="content slide-right">
-                    <h1 class = "fw-600">Easier Deployment</h1>
-                    <p>Deploy web apps of all kinds, from large scale enterprise APIs to static websites for individuals.
-                    Fill out the form to try a demo of our platform</p>
-                    <a class = "btn" href = "features.html">Read More</a>
-                </div>
-                <div class="card slide-left">
-                    <h1>Request a Demo</h1>
-                    <form autocomplete="off" onsubmit="return false;">
-                        <input type = "text" placeholder = "Name" class = "block"/>
-                        <input type = "text" placeholder = "Company Name" class = "block"/>
-                        <input type = "email" placeholder = "Email" class = "block"/>
-                        <input type = "submit" class = "btn btn-submit" value = "Send"/>
-                    </form>
-                </div>
-            </div>
-        </section>
+      <section class="showcase">
+        <div class="container flex justify-between align-center">
+          <div class="content slide-right">
+            <h1 class="fw-600">Easier Deployment</h1>
+            <p>
+              Deploy web apps of all kinds, from large scale enterprise APIs to
+              static websites for individuals. Fill out the form to try a demo
+              of our platform
+            </p>
+            <a class="btn" href="features.html">Read More</a>
+          </div>
+          <div class="card slide-left">
+            <h1>Request a Demo</h1>
+            <form autocomplete="off" onsubmit="return false;">
+              <input type="text" placeholder="Name" class="block" />
+              <input type="text" placeholder="Company Name" class="block" />
+              <input type="email" placeholder="Email" class="block" />
+              <input type="submit" class="btn btn-submit" value="Send" />
+            </form>
+          </div>
+        </div>
+      </section>
     </header>
-    <main class = "index">
-     
-        <section class = "overview bg-theme tl-center">
-            <div class="container slide-down">
-                <p class = "welcome fw-600">Welcome to the best platform for building applications of all types 
-                    <br/>
-                    with modern architecture and scaling</p>
-                <div class="statistics">
-                    <div class="card statistics-item tl-center">
-                        <i class="fas fa-server fa-3x"></i>
-                        <h1>10,349,405</h1>
-                        <p class = "fw-600">Deployments</p>
-                    </div>
-                    <div class="card statistics-item tl-center">
-                        <i class="fas fa-server fa-3x"></i>
-                        <h1>987 TB</h1>
-                        <p class = "fw-600">Published</p>
-                    </div>
-                    <div class="card statistics-item tl-center">
-                        <i class="fas fa-upload fa-3x"></i>
-                        <h1>2,343,265</h1>
-                        <p class = "fw-600">Projects</p>
-                    </div>
-                </div>
-                <div class="command-line">
-                    <div class="command">
-                        <code>npm install -g daebak-cli</code>
-                        <a title = "Copy to clipboard" tabindex = "-1" class="copy-icon" href = "#!">
-                            <i class="far fa-clipboard"></i>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <p>Easy to use, cross platform CLI</p>
-                    </div>
-                    <div class="card">
-                        <p>Deploy in seconds</p>
-                    </div>
-                </div>
+    <main class="index">
+      <section class="overview bg-theme tl-center">
+        <div class="container slide-down">
+          <p class="welcome fw-600">
+            Welcome to the best platform for building applications of all types
+            <br />
+            with modern architecture and scaling
+          </p>
+          <div class="statistics">
+            <div class="card statistics-item tl-center">
+              <i class="fas fa-server fa-3x"></i>
+              <h1>10,349,405</h1>
+              <p class="fw-600">Deployments</p>
             </div>
-        </section>
-        <section class = "info bg-highlight">
-            <div class="container flex justify-between">
-                <div class="content tl-center">
-                    <h1>Extreme Cloud Hosting</h1>
-                    <p>Cloud hosting like you've never seen. Fast, efficient and scalable</p>
-                    <a class = "btn" href= "#!">Read More</a>
-                </div>
-                <img src = "./images/cloud.png" alt = "cloud"/>
+            <div class="card statistics-item tl-center">
+              <i class="fas fa-server fa-3x"></i>
+              <h1>987 TB</h1>
+              <p class="fw-600">Published</p>
             </div>
-            
-        </section>
-        <section class="testimonials tl-center">
-            <div class="container">
-                <h2 class = "content-title">Our Testimonials</h2>
-                <button class = "btn-slider left"><i class="fas fa-chevron-left"></i></button>
-                <button class = "btn-slider right"><i class="fas fa-chevron-right"></i></button>
-                <div class="carousel-container">
-                    <div class="carousel flex">
-                        <div class="card flex">
-                            <div class="quote">
-                                <blockquote>
-                                    1. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, rerum!
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio expedita optio, natus vero nihil ipsa qui at ullam nemo quia?
-                                </blockquote>
-                                <cite> - Albert Einstein</cite>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="quote">
-                                <blockquote>
-                                    2. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, rerum!
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur distinctio eligendi cum, quo aperiam numquam eum repellat quia. Ipsum, fuga!
-                                </blockquote>
-                                <cite> - Abdul Kalam</cite>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="quote">
-                                <blockquote>
-                                    3. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, rerum!
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates doloribus laudantium, possimus excepturi error illo, ullam eum officiis reiciendis pariatur alias, 
-                                    esse ducimus aperiam totam inventore repellendus! Sequi, voluptatibus ullam? Ut, accusamus ipsam. Quisquam commodi illo doloribus mollitia suscipit quidem.
-                                </blockquote>
-                                <cite> - Sachin Tendulkar</cite>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="quote">
-                                <blockquote>
-                                    4. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, rerum!
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, voluptatem?
-                                </blockquote>
-                                <cite> - Jackie Chan</cite>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="quote">
-                                <blockquote>
-                                    5. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, rerum!
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus hic in enim assumenda molestias aliquid adipisci nesciunt voluptate obcaecati illum pariatur ullam architecto placeat laudantium, ab omnis tempore dicta quaerat. 
-                                    Ducimus voluptates qui nostrum consequatur dolore tempore, ut eligendi obcaecati commodi porro perferendis nemo et? Hic sequi nisi id quis.
-                                </blockquote>
-                                <cite> - Choi Min Sik</cite>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="quote">
-                                <blockquote>
-                                    6. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, rerum!
-                                </blockquote>
-                                <cite> - Baba Ramdev</cite>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="pagination flex justify-center">
-                    <div id = "id-0" class="circle active"></div>
-                    <div id = "id-1" class="circle"></div>
-                    <div id = "id-2" class="circle"></div>
-                    <div id = "id-3" class="circle"></div>
-                    <div id = "id-4"class="circle"></div>
-                    <div id = "id-5" class="circle"></div>
-                </div>
+            <div class="card statistics-item tl-center">
+              <i class="fas fa-upload fa-3x"></i>
+              <h1>2,343,265</h1>
+              <p class="fw-600">Projects</p>
             </div>
-
-        </section>
-        <section class="languages tl-center">
-            <div class = container>
-            <h2 class = "content-title">Supported Languages</h2>
-            <div class="flex flex-wrap justify-center">
-                <div class="card" style="--delay:0.1s;">
-                    <p class = "language fw-600">Node.js</p>
-                    <img src = "./images/logos/node.png"/>
-                </div>
-                <div class="card" style="--delay:0.2s;">
-                    <p class = "language fw-600">Python</p>
-                    <img src = "./images/logos/python.png"/>
-                </div>
-                <div class="card" style="--delay:0.3s;">
-                    <p class = "language fw-600">C#</p>
-                    <img src = "./images/logos/csharp.png"/>
-                </div>
-                <div class="card" style="--delay:0.4s;">
-                    <p class = "language fw-600">Clojure</p>
-                    <img src = "./images/logos/clojure.png"/>
-                </div>
-                <div class="card" style="--delay:0.5s;">
-                    <p class = "language fw-600">Ruby</p>
-                    <img src = "./images/logos/ruby.png"/>
-                </div>
-                <div class="card" style="--delay:0.6s;">
-                    <p class = "language fw-600">PHP</p>
-                    <img src = "./images/logos/php.png"/>
-                </div>
-                <div class="card" style="--delay:0.7s;">
-                    <p class = "language fw-600">Scala</p>
-                    <img src = "./images/logos/scala.png"/>
-                </div>
-                
+          </div>
+          <div class="command-line">
+            <div class="command">
+              <code>npm install -g daebak-cli</code>
+              <a
+                title="Copy to clipboard"
+                tabindex="-1"
+                class="copy-icon"
+                href="#!"
+              >
+                <i class="far fa-clipboard"></i>
+              </a>
             </div>
+            <div class="card">
+              <p>Easy to use, cross platform CLI</p>
+            </div>
+            <div class="card">
+              <p>Deploy in seconds</p>
+            </div>
+          </div>
         </div>
-
-        </section>
-
+      </section>
+      <section class="info bg-highlight">
+        <div class="container flex justify-between align-center">
+          <div class="content tl-center">
+            <h1>Extreme Cloud Hosting</h1>
+            <p>
+              Cloud hosting like you've never seen. Fast, efficient and scalable
+            </p>
+            <a class="btn" href="#!">Read More</a>
+          </div>
+          <img src="./images/cloud.png" alt="cloud" />
+        </div>
+      </section>
+      <section class="testimonials tl-center">
+        <div class="container">
+          <h2 class="content-title">Our Testimonials</h2>
+          <button class="btn-slider left">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="btn-slider right">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <div class="carousel-container">
+            <div class="carousel flex">
+              <div class="card flex align-center">
+                <div class="quote">
+                  <blockquote>
+                    1. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Repellendus, rerum! Lorem ipsum dolor sit, amet consectetur
+                    adipisicing elit. Odio expedita optio, natus vero nihil ipsa
+                    qui at ullam nemo quia?
+                  </blockquote>
+                  <cite> - Albert Einstein</cite>
+                </div>
+              </div>
+              <div class="card flex align-center">
+                <div class="quote">
+                  <blockquote>
+                    2. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Repellendus, rerum! Lorem ipsum dolor, sit amet consectetur
+                    adipisicing elit. Aspernatur distinctio eligendi cum, quo
+                    aperiam numquam eum repellat quia. Ipsum, fuga!
+                  </blockquote>
+                  <cite> - Abdul Kalam</cite>
+                </div>
+              </div>
+              <div class="card flex align-center">
+                <div class="quote">
+                  <blockquote>
+                    3. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Repellendus, rerum! Lorem ipsum dolor sit amet consectetur,
+                    adipisicing elit. Voluptates doloribus laudantium, possimus
+                    excepturi error illo, ullam eum officiis reiciendis pariatur
+                    alias, esse ducimus aperiam totam inventore repellendus!
+                    Sequi, voluptatibus ullam? Ut, accusamus ipsam. Quisquam
+                    commodi illo doloribus mollitia suscipit quidem.
+                  </blockquote>
+                  <cite> - Sachin Tendulkar</cite>
+                </div>
+              </div>
+              <div class="card flex align-center">
+                <div class="quote">
+                  <blockquote>
+                    4. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Repellendus, rerum! Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Corporis, voluptatem?
+                  </blockquote>
+                  <cite> - Jackie Chan</cite>
+                </div>
+              </div>
+              <div class="card flex align-center">
+                <div class="quote">
+                  <blockquote>
+                    5. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Repellendus, rerum! Lorem ipsum dolor, sit amet consectetur
+                    adipisicing elit. Ducimus hic in enim assumenda molestias
+                    aliquid adipisci nesciunt voluptate obcaecati illum pariatur
+                    ullam architecto placeat laudantium, ab omnis tempore dicta
+                    quaerat. Ducimus voluptates qui nostrum consequatur dolore
+                    tempore, ut eligendi obcaecati commodi porro perferendis
+                    nemo et? Hic sequi nisi id quis.
+                  </blockquote>
+                  <cite> - Choi Min Sik</cite>
+                </div>
+              </div>
+              <div class="card flex align-center">
+                <div class="quote">
+                  <blockquote>
+                    6. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Repellendus, rerum!
+                  </blockquote>
+                  <cite> - Baba Ramdev</cite>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pagination flex justify-center">
+            <div id="id-0" class="circle active"></div>
+            <div id="id-1" class="circle"></div>
+            <div id="id-2" class="circle"></div>
+            <div id="id-3" class="circle"></div>
+            <div id="id-4" class="circle"></div>
+            <div id="id-5" class="circle"></div>
+          </div>
+        </div>
+      </section>
+      <section class="languages tl-center">
+        <div class="container">
+          <h2 class="content-title">Supported Languages</h2>
+          <div class="flex flex-wrap justify-center">
+            <div class="card" style="--delay: 0.1s">
+              <p class="language fw-600">Node.js</p>
+              <img src="./images/logos/node.png" />
+            </div>
+            <div class="card" style="--delay: 0.2s">
+              <p class="language fw-600">Python</p>
+              <img src="./images/logos/python.png" />
+            </div>
+            <div class="card" style="--delay: 0.3s">
+              <p class="language fw-600">C#</p>
+              <img src="./images/logos/csharp.png" />
+            </div>
+            <div class="card" style="--delay: 0.4s">
+              <p class="language fw-600">Clojure</p>
+              <img src="./images/logos/clojure.png" />
+            </div>
+            <div class="card" style="--delay: 0.5s">
+              <p class="language fw-600">Ruby</p>
+              <img src="./images/logos/ruby.png" />
+            </div>
+            <div class="card" style="--delay: 0.6s">
+              <p class="language fw-600">PHP</p>
+              <img src="./images/logos/php.png" />
+            </div>
+            <div class="card" style="--delay: 0.7s">
+              <p class="language fw-600">Scala</p>
+              <img src="./images/logos/scala.png" />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
-        <div class="container">
-            <div class="brand">
-                <h1>Daebak</h1>
-                <p>Copyright &copy; 2021</p>
-            </div>
-            <ul class="sitemap">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="features.html">Features</a></li>
-                <li><a href="docs.html">Docs</a></li>
-            </ul>
-            <div class="social">
-                <a href="#!"><i class="fab fa-github fa-2x"></i></a>
-                <a href="#!"><i class="fab fa-facebook fa-2x"></i></a>
-                <a href="#!"><i class="fab fa-instagram fa-2x"></i></a>
-                <a href="#!"><i class="fab fa-twitter fa-2x"></i></a>
-            </div>
+      <div class="container">
+        <div class="brand">
+          <h1>Daebak</h1>
+          <p>Copyright &copy; 2021</p>
         </div>
+        <ul class="sitemap">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="docs.html">Docs</a></li>
+        </ul>
+        <div class="social">
+          <a href="#!"><i class="fab fa-github fa-2x"></i></a>
+          <a href="#!"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="#!"><i class="fab fa-instagram fa-2x"></i></a>
+          <a href="#!"><i class="fab fa-twitter fa-2x"></i></a>
+        </div>
+      </div>
     </footer>
-    <script src = "./js/common.js"></script>
-    <script src = "./js/main.js" defer></script>
-    
-</body>
+    <script src="./js/common.js"></script>
+    <script src="./js/main.js" defer></script>
+  </body>
 </html>
