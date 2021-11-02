@@ -55,8 +55,8 @@ copyIcons.forEach((copyIcon) =>
     const clipboardText = this.previousElementSibling.textContent;
 
     navigator.clipboard?.writeText(clipboardText).then(() => {
-      this.classList.add("copied");
       this.innerHTML = `<i class="fas fa-clipboard-check"></i><span>Copied</span>`;
+      this.classList.add("copied");
       setTimeout(() => {
         this.classList.remove("copied");
         this.innerHTML = beforeCopyHTML;

@@ -46,7 +46,7 @@ body {
   font-family: "Lato", Arial, Helvetica, sans-serif;
   font-size: 18px;
   line-height: 1.5;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   position: relative;
 }
 
@@ -258,6 +258,9 @@ h2.content-title {
   right: 10px;
   padding: 4px 8px;
   border-radius: 4px;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
 .copy-icon:hover {
@@ -267,7 +270,7 @@ h2.content-title {
   color: #fff;
 }
 
-.copied {
+.copy-icon.copied {
   pointer-events: none;
   cursor: not-allowed;
   background-color: var(--copied-success-clr);

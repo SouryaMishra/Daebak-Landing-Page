@@ -178,16 +178,16 @@ input {
 }
 
 .left {
-  left: 15%;
+  left: max(8%, 1rem);
 }
 
 .right {
-  right: 15%;
+  right: max(8%, 1rem);
 }
 
 .carousel .card {
   flex: 1 0 100%;
-  padding: 2rem 20%;
+  padding: 2rem;
 }
 
 blockquote::before {
